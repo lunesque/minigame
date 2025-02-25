@@ -9,7 +9,7 @@ include 'header.php';
     <h2>The game</h2>
     <p>A minigame made with PHP, HTML, CSS.</p>
     <p>Avatars taken from Animal Crossing</p>
-    <a href=''>Source code</a>
+    <a href='https://github.com/lunesque/minigame'>Source code</a>
 </div>
 
     <div class='about-me'>
