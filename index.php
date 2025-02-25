@@ -97,7 +97,8 @@ if (isset($_GET['action'])) {
                     $_SESSION['defender-hp'] = $defender->getCurrentHP();
 
                     if ($defender->is_dead()) {
-                        $log = "<p><strong>{$attacker->getName()}</strong> defeated <strong>{$defender->getName()}</strong>!</p><a href=''>Start a new game ?</a>";
+                        $log = "<p><strong>{$attacker->getName()}</strong> defeated <strong>{$defender->getName()}</strong> !</p>";
+                        include 'view/gameover.php';
                     }
                 }
                 if (isset($_POST['attack-attacker'])) {
@@ -106,8 +107,8 @@ if (isset($_GET['action'])) {
                     $_SESSION['attacker-hp'] = $attacker->getCurrentHP();
 
                     if ($attacker->is_dead()) {
-                        $_SESSION['game'] = 'over';
-                        $log = "<p><strong>{$defender->getName()}</strong> defeated <strong>{$attacker->getName()}</strong> !</p><a href=''>Start a new game ?</a>";
+                        $log = "<p><strong>{$defender->getName()}</strong> defeated <strong>{$attacker->getName()}</strong> !</p>";
+                        include 'view/gameover.php';
                     }
                 }
                 require 'view/fight.php';
