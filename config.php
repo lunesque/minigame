@@ -6,7 +6,7 @@
 
     session_start();
  
-    $db = new PDO('mysql:host=mysql-thuyhangnguyen.alwaysdata.net;dbname=thuyhangnguyen_minigame', '401406_user', 'basicuser');
+    $db = new PDO('mysql:host=localhost;dbname=minigame', 'root', '');
 
     $manager = new CharacterManager($db);
 ?>
